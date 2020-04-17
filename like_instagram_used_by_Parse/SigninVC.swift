@@ -11,26 +11,37 @@ import Parse
 
 
 class SigninVC: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
-
+        
+        
     }
     
-
+    
     @IBOutlet weak var userNameText: UITextField!
     @IBOutlet weak var passwordText: UITextField!
-
+    
     
     @IBAction func signInClicked(_ sender: Any) {
-            performSegue(withIdentifier: "toTabBar", sender: nil)
+        
+        if userNameText.text != "" && passwordText.text != "" {
+            PFUser.logInWithUsername(inBackground: userNameText.text!, password: passwordText.text!) { (user, error) in
+                if error != nil {
+                    self.alert(title: "Error", message: error?.localizedDescription ?? "Unknown error" )
+                }else{
+                    print("welcome: \((user!.username ?? " "))")
+                    self.performSegue(withIdentifier: "toTabBar", sender: nil)
+                }
+            }
+        } else {
+            self.alert(title: "Error", message: "Username needed!")
+        }
     }
     
     @IBAction func signUpClicked(_ sender: Any) {
         if userNameText.text != "" && passwordText.text != "" {
-            
             let user = PFUser()
             user.username = self.userNameText.text!
             user.password = self.passwordText.text!
@@ -41,7 +52,6 @@ class SigninVC: UIViewController {
                     print("user create")
                 }
             }
-            
         } else {
             self.alert(title: "Error", message: "Username needed!")
         }
