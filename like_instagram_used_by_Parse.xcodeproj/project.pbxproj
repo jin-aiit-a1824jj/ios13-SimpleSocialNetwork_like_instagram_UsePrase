@@ -15,6 +15,7 @@
 		6568B28A2449660B00B00F6F /* SigninVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6568B2892449660B00B00F6F /* SigninVC.swift */; };
 		6568B28C244967AF00B00F6F /* UploadVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6568B28B244967AF00B00F6F /* UploadVC.swift */; };
 		6568B28E244967C500B00F6F /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6568B28D244967C500B00F6F /* FeedVC.swift */; };
+		65D93F622449A699007EF1CA /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D93F612449A699007EF1CA /* FeedCell.swift */; };
 		73C6A507FB6D7A7000BC2136 /* Pods_like_instagram_used_by_Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4F41AA0822D5F8924B670F6 /* Pods_like_instagram_used_by_Parse.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		6568B2892449660B00B00F6F /* SigninVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninVC.swift; sourceTree = "<group>"; };
 		6568B28B244967AF00B00F6F /* UploadVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadVC.swift; sourceTree = "<group>"; };
 		6568B28D244967C500B00F6F /* FeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		65D93F612449A699007EF1CA /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		B4F41AA0822D5F8924B670F6 /* Pods_like_instagram_used_by_Parse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_like_instagram_used_by_Parse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -93,6 +95,7 @@
 				6568B2892449660B00B00F6F /* SigninVC.swift */,
 				6568B28B244967AF00B00F6F /* UploadVC.swift */,
 				6568B28D244967C500B00F6F /* FeedVC.swift */,
+				65D93F612449A699007EF1CA /* FeedCell.swift */,
 			);
 			path = like_instagram_used_by_Parse;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 				6568B28E244967C500B00F6F /* FeedVC.swift in Sources */,
 				6507E66B2449637F002A7238 /* SceneDelegate.swift in Sources */,
 				6568B28C244967AF00B00F6F /* UploadVC.swift in Sources */,
+				65D93F622449A699007EF1CA /* FeedCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
