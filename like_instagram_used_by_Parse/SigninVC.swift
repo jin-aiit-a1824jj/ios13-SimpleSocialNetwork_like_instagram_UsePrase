@@ -32,6 +32,8 @@ class SigninVC: UIViewController {
                     self.alert(title: "Error", message: error?.localizedDescription ?? "Unknown error" )
                 }else{
                     print("welcome: \((user!.username ?? " "))")
+                    UserDefaults.standard.set(self.userNameText.text!, forKey: "username")
+                    UserDefaults.standard.synchronize()
                     self.performSegue(withIdentifier: "toTabBar", sender: nil)
                 }
             }
@@ -50,6 +52,9 @@ class SigninVC: UIViewController {
                     self.alert(title: "Error", message: error?.localizedDescription ?? "Unknown error" )
                 }else{
                     print("user create")
+                    UserDefaults.standard.set(self.userNameText.text!, forKey: "username")
+                    UserDefaults.standard.synchronize()
+                     self.performSegue(withIdentifier: "toTabBar", sender: nil)
                 }
             }
         } else {

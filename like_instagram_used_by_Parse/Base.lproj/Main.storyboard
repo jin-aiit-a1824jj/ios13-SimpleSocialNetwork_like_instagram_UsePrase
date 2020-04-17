@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MTN-L8-uKh">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -42,7 +42,7 @@
         <!--SigninVC-->
         <scene sceneID="jZF-Y8-Ab7">
             <objects>
-                <viewController id="MTN-L8-uKh" customClass="SigninVC" customModule="like_instagram_used_by_Parse" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="signUp" id="MTN-L8-uKh" customClass="SigninVC" customModule="like_instagram_used_by_Parse" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CI8-jg-nfL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -99,7 +99,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="US4-a3-lKt">
             <objects>
-                <tabBarController id="g0Y-q3-uIQ" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabBar" id="g0Y-q3-uIQ" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="XV5-zo-t5t"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="y0q-Ie-jIB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
