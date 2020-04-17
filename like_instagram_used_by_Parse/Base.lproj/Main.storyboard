@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="g0Y-q3-uIQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MTN-L8-uKh">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
@@ -7,42 +7,100 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--Upload-->
         <scene sceneID="tRz-dn-Pvd">
             <objects>
-                <viewController id="zJI-Sd-ONz" sceneMemberID="viewController">
+                <viewController id="zJI-Sd-ONz" customClass="UploadVC" customModule="like_instagram_used_by_Parse" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VSX-fZ-p2i">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="AGT-3Q-Rgs"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="I9g-OD-DkF"/>
+                    <tabBarItem key="tabBarItem" title="Upload" image="u.square.fill" catalog="system" id="I9g-OD-DkF"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MlV-0A-9N5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1752" y="516"/>
         </scene>
-        <!--Item 1-->
+        <!--Feed-->
         <scene sceneID="KQc-pv-gxU">
             <objects>
-                <viewController id="m5E-bD-9s9" sceneMemberID="viewController">
+                <viewController id="m5E-bD-9s9" customClass="FeedVC" customModule="like_instagram_used_by_Parse" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CVW-5c-rIK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="fQu-bn-Xhl"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="YBz-wH-aFA"/>
+                    <tabBarItem key="tabBarItem" title="Feed" image="f.square.fill" catalog="system" id="YBz-wH-aFA"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RTh-qm-3eW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1751" y="-133"/>
         </scene>
+        <!--SigninVC-->
+        <scene sceneID="jZF-Y8-Ab7">
+            <objects>
+                <viewController id="MTN-L8-uKh" customClass="SigninVC" customModule="like_instagram_used_by_Parse" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CI8-jg-nfL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Like Instargrm - Parse" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dKK-vC-Kk6">
+                                <rect key="frame" x="45" y="127" width="324" height="105"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="31"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="userename" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aGE-hb-4w2">
+                                <rect key="frame" x="45" y="289" width="325" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2J1-XC-y4u">
+                                <rect key="frame" x="45" y="341" width="325" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bjq-xm-eqe">
+                                <rect key="frame" x="45" y="418" width="140" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Sign In"/>
+                                <connections>
+                                    <action selector="signInClicked:" destination="MTN-L8-uKh" eventType="touchUpInside" id="T7C-hs-Pue"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nHg-wZ-JqX">
+                                <rect key="frame" x="230" y="418" width="140" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Sign Up"/>
+                                <connections>
+                                    <action selector="signUpClicked:" destination="MTN-L8-uKh" eventType="touchUpInside" id="nYd-Bx-F9P"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="TLP-sP-mcV"/>
+                    </view>
+                    <connections>
+                        <outlet property="passwordText" destination="2J1-XC-y4u" id="7S4-L1-88a"/>
+                        <outlet property="userNameText" destination="aGE-hb-4w2" id="SlT-K2-685"/>
+                        <segue destination="g0Y-q3-uIQ" kind="presentation" identifier="toTabBar" modalPresentationStyle="fullScreen" id="JJV-Uo-Y2c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T5h-Yn-vu6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-126.08695652173914" y="187.5"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="US4-a3-lKt">
             <objects>
                 <tabBarController id="g0Y-q3-uIQ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="XV5-zo-t5t"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="y0q-Ie-jIB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -58,4 +116,8 @@
             <point key="canvasLocation" x="755" y="188"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="f.square.fill" catalog="system" width="128" height="114"/>
+        <image name="u.square.fill" catalog="system" width="128" height="114"/>
+    </resources>
 </document>
