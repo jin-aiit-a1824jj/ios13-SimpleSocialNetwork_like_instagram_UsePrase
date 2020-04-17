@@ -7,12 +7,24 @@
 //
 
 import UIKit
+import Parse
+
 
 class SigninVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        let parseObject = PFObject(className: "Fruits")
+        parseObject["name"] = "apple"
+        parseObject["calories"] = 100
+        parseObject.saveInBackground { (success, error) in
+            if error != nil {
+                print(error?.localizedDescription as Any)
+            } else {
+                print("Successful!")
+            }
+        }
     }
     
 
