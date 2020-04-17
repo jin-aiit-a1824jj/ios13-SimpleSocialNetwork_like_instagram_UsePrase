@@ -21,6 +21,8 @@ class UploadVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
         postImage.isUserInteractionEnabled = true
         let gestureRecognize = UITapGestureRecognizer(target: self, action: #selector(self.upload))
         postImage.addGestureRecognizer(gestureRecognize)
+        
+        self.postButton.isEnabled = false
     }
     
     @objc func hideKeyboard(_ sender: Any) {
@@ -41,7 +43,7 @@ class UploadVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
         
         postImage?.image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage
         self.dismiss(animated: true, completion: nil)
-        
+        self.postButton.isEnabled = true
     }
     
     @IBOutlet weak var postImage: UIImageView!
@@ -49,6 +51,7 @@ class UploadVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
     @IBOutlet weak var postButton: UIButton!
     
     @IBAction func postButtonClick(_ sender: Any) {
+        self.postButton.isEnabled = false
         
         let object = PFObject(className: "Posts")
         if let data = postImage.image?.jpegData(compressionQuality: 0.5) {
@@ -67,6 +70,8 @@ class UploadVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
                         self.postCommentText.text = ""
                         self.postImage.image = UIImage(named: "selec.jpg")
                         self.tabBarController?.selectedIndex = 0
+                        
+                        NotificationCenter.default.post(name: NSNotification.Name("newPost"), object: nil)
                     }
                 }
             }
