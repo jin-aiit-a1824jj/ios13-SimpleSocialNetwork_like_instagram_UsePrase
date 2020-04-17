@@ -14,7 +14,8 @@ class SigninVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+       
+        /*
         let parseObject = PFObject(className: "Fruits")
         parseObject["name"] = "apple"
         parseObject["calories"] = 100
@@ -25,6 +26,19 @@ class SigninVC: UIViewController {
                 print("Successful!")
             }
         }
+        */
+        
+        let query = PFQuery(className: "Fruits")
+        query.whereKey("calories", greaterThan: 50)
+        query.findObjectsInBackground { (objects, error) in
+            if error != nil {
+                print(error?.localizedDescription as Any)
+            } else {
+                print(objects as Any)
+            }
+        }
+        
+        
     }
     
 
