@@ -93,14 +93,32 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z7z-QI-Jfa">
+                                                    <rect key="frame" x="20" y="359" width="30" height="30"/>
+                                                    <state key="normal" title="Like"/>
+                                                    <connections>
+                                                        <action selector="likeClicked:" destination="H65-as-2Wa" eventType="touchUpInside" id="Frr-LH-7T9"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4AR-7E-8nD">
+                                                    <rect key="frame" x="347" y="359" width="67" height="30"/>
+                                                    <state key="normal" title="Comment"/>
+                                                    <connections>
+                                                        <action selector="commentClicked:" destination="H65-as-2Wa" eventType="touchUpInside" id="pZN-1K-MM1"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="DUZ-ve-6gO" firstAttribute="top" secondItem="ddx-yR-Wj0" secondAttribute="topMargin" id="2Sb-X5-yrE"/>
+                                                <constraint firstItem="z7z-QI-Jfa" firstAttribute="leading" secondItem="ddx-yR-Wj0" secondAttribute="leadingMargin" id="HRf-I1-1Wc"/>
                                                 <constraint firstItem="4bK-Ko-r6n" firstAttribute="leading" secondItem="ddx-yR-Wj0" secondAttribute="leadingMargin" id="OkT-ib-Hz9"/>
                                                 <constraint firstItem="4bK-Ko-r6n" firstAttribute="trailing" secondItem="ddx-yR-Wj0" secondAttribute="trailingMargin" id="P0y-hc-uIZ"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="4bK-Ko-r6n" secondAttribute="bottom" constant="117" id="SdX-mL-rHy"/>
                                                 <constraint firstItem="4bK-Ko-r6n" firstAttribute="top" secondItem="ddx-yR-Wj0" secondAttribute="topMargin" constant="50" id="Ts1-yd-N6G"/>
+                                                <constraint firstItem="z7z-QI-Jfa" firstAttribute="top" secondItem="ddx-yR-Wj0" secondAttribute="topMargin" constant="348" id="Vc0-JR-4c8"/>
                                                 <constraint firstItem="DUZ-ve-6gO" firstAttribute="leading" secondItem="ddx-yR-Wj0" secondAttribute="leadingMargin" id="Yfd-mf-mq0"/>
+                                                <constraint firstAttribute="trailing" secondItem="4AR-7E-8nD" secondAttribute="trailing" id="l7l-qy-H4o"/>
+                                                <constraint firstItem="4AR-7E-8nD" firstAttribute="top" secondItem="ddx-yR-Wj0" secondAttribute="top" constant="359" id="uI0-bJ-TFP"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
