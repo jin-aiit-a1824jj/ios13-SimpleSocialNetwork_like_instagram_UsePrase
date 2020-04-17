@@ -7,17 +7,44 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--UploadVC-->
+        <!--Upload a Post-->
         <scene sceneID="tRz-dn-Pvd">
             <objects>
                 <viewController id="zJI-Sd-ONz" customClass="UploadVC" customModule="like_instagram_used_by_Parse" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VSX-fZ-p2i">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="selec" translatesAutoresizingMaskIntoConstraints="NO" id="odi-BH-5Kc">
+                                <rect key="frame" x="20" y="140" width="374" height="211"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="input comment" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Fdn-1V-NSA">
+                                <rect key="frame" x="20" y="372" width="374" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tql-qv-Gcf">
+                                <rect key="frame" x="287" y="527" width="100" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Post"/>
+                                <connections>
+                                    <action selector="postButtonClick:" destination="zJI-Sd-ONz" eventType="touchUpInside" id="TiC-cY-Poa"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="AGT-3Q-Rgs"/>
                     </view>
-                    <navigationItem key="navigationItem" id="1bZ-Du-Ueh"/>
+                    <navigationItem key="navigationItem" title="Upload a Post" id="1bZ-Du-Ueh"/>
+                    <connections>
+                        <outlet property="postButton" destination="Tql-qv-Gcf" id="TAX-16-cyc"/>
+                        <outlet property="postCommentText" destination="Fdn-1V-NSA" id="Xjz-K9-suI"/>
+                        <outlet property="postImage" destination="odi-BH-5Kc" id="HtZ-Xr-jlh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MlV-0A-9N5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -162,6 +189,7 @@
     </scenes>
     <resources>
         <image name="f.square.fill" catalog="system" width="128" height="114"/>
+        <image name="selec" width="292" height="174"/>
         <image name="u.square.fill" catalog="system" width="128" height="114"/>
     </resources>
 </document>
