@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class UploadVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -49,6 +50,35 @@ class UploadVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
     
     @IBAction func postButtonClick(_ sender: Any) {
         
+        let object = PFObject(className: "Posts")
+        if let data = postImage.image?.jpegData(compressionQuality: 0.5) {
+            if let pfImage = PFFileObject(name: "image.jpg", data: data) {
+                object["postimage"] = pfImage
+                object["postcomment"] = self.postCommentText.text!
+                object["postedowner"] = PFUser.current()!.username!
+                
+                let uuid = UUID().uuidString
+                object["postuuid"] = "\(uuid)_\(PFUser.current()!.username!)"
+                
+                object.saveInBackground { (success, error) in
+                    if error != nil {
+                        self.alert(title: "Error", message: error?.localizedDescription ?? "Unknows error")
+                    } else {
+                        self.postCommentText.text = ""
+                        self.postImage.image = UIImage(named: "selec.jpg")
+                        self.tabBarController?.selectedIndex = 0
+                    }
+                }
+            }
+        }
+        
+    }
+    
+    func alert(title: String, message: String) {
+        let alert =  UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okButton = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alert.addAction(okButton)
+        self.present(alert, animated: true, completion: nil)
     }
     
 }
